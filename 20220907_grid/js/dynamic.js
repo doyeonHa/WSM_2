@@ -79,3 +79,4 @@ const initButton = () => {
     next_btn.onclick = nextMonth;
 }
 initButton();
+
