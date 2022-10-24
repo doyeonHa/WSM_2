@@ -103,10 +103,23 @@ const handler = (event) => {
 //AJAX로 url 호출하자(Asynchronous JavaScript And XML)
 const getMenuByAPI = (url) => {
     //XMLHttpRequest 만들자
-    
-    //요청을 보낼 방식, url, 비동기여부 설정하자
-    //요청 전송하자
+    let xhr = new XMLHttpRequest();
     //callback
+    xhr.onreadystatechange = () => {
+        if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
+            //success
+            console.log("성공");
+            console.log(xhr.response);
+        }else{
+            //fail
+            console.log("실패",xhr.status);
+        }
+    }
+
+    //요청을 보낼 방식, url, 비동기여부 설정하자
+    xhr.open("GET",url,true);
+    //요청 전송하자
+    xhr.send();
 }
 //응답오면, #breakfast, #lucnh, #dinner에 출력하자
 let dateGridContainerDiv = document.getElementsByClassName("date-grid-container")[0];
