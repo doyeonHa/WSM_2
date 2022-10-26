@@ -153,7 +153,7 @@ let dateGridContainerDiv = document.getElementsByClassName("date-grid-container"
 let gridItems = dateGridContainerDiv.getElementsByClassName("grid-item");
 for(let gridItem of gridItems){
     //console.log(gridItem);
-    gridItem.onclick = handler;
+    gridItem.onmouseover = handler; //mouseover일 때, 이벤트 처리하자
 }
 
 
