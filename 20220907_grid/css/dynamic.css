@@ -15,9 +15,10 @@ main{
     border: 1px solid #252525;
     border-radius: 100px;
     padding: 10px;
-    display: flex;
+    /*display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
+    cursor: pointer;
 }
 h1{
     text-align: center;
@@ -44,6 +45,7 @@ h1{
 .date-grid-container .grid-item:hover{
     background-color: lightcoral;
     border-radius: 20px;
+    cursor: pointer;
 
 }
 .first{
